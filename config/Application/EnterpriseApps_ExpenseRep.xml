@@ -1,0 +1,28 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE Application PUBLIC "sailpoint.dtd" "sailpoint.dtd">
+<Application connector="sailpoint.connector.DelimitedFileConnector" featuresString="DIRECT_PERMISSIONS, NO_RANDOM_ACCESS, DISCOVER_SCHEMA" icon="enterpriseIcon" name="EnterpriseApps - ExpenseRep" profileClass="" proxiedName="EnterpriseApps - ExpenseRep" type="DelimitedFile">
+  <AccountCorrelationConfig>
+    <Reference class="sailpoint.object.CorrelationConfig" name="Multiplex Correlation"/>
+  </AccountCorrelationConfig>
+  <CustomizationRule>
+    <Reference class="sailpoint.object.Rule" name="Admin Customization Rule"/>
+  </CustomizationRule>
+  <Owner>
+    <Reference class="sailpoint.object.Identity" name="spadmin"/>
+  </Owner>
+  <ProxyApplication>
+    <Reference class="sailpoint.object.Application" name="Multiplex-App Base"/>
+  </ProxyApplication>
+  <Schemas>
+    <Schema displayAttribute="fullName" identityAttribute="employeeId" instanceAttribute="" nativeObjectType="account" objectType="account" permissionsRemediationModificationType="None">
+      <AttributeDefinition name="employeeId" type="string"/>
+      <AttributeDefinition name="fullName" type="string"/>
+      <AttributeDefinition name="userID" type="string"/>
+      <AttributeDefinition name="department" type="string"/>
+      <AttributeDefinition name="Application" type="string"/>
+      <AttributeDefinition name="inactiveIdentity" type="string"/>
+      <AttributeDefinition name="Role" type="string"/>
+    </Schema>
+  </Schemas>
+  <ApplicationScorecard/>
+</Application>

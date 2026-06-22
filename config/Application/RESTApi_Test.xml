@@ -1,0 +1,156 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE Application PUBLIC "sailpoint.dtd" "sailpoint.dtd">
+<Application name="RESTApi Test" profileClass="" type="Web Services">
+  <Attributes>
+    <Map>
+      <entry key="afterProvisioningRule"/>
+      <entry key="authenticationMethod" value="No Auth"/>
+      <entry key="beforeProvisioningRule"/>
+      <entry key="clientCertAuthEnabled">
+        <value>
+          <Boolean/>
+        </value>
+      </entry>
+      <entry key="compositeDefinition"/>
+      <entry key="connectionParameters">
+        <value>
+          <List>
+            <Map>
+              <entry key="afterRule"/>
+              <entry key="beforeRule"/>
+              <entry key="body">
+                <value>
+                  <Map>
+                    <entry key="bodyFormData"/>
+                    <entry key="bodyFormat" value="raw"/>
+                    <entry key="jsonBody"/>
+                  </Map>
+                </value>
+              </entry>
+              <entry key="contextUrl" value="/b8ec51b6-8145-4772-8886-c94367216589"/>
+              <entry key="header">
+                <value>
+                  <Map>
+                    <entry key="accept" value="application/json"/>
+                  </Map>
+                </value>
+              </entry>
+              <entry key="httpMethodType" value="GET"/>
+              <entry key="operationType" value="Account Aggregation"/>
+              <entry key="paginationSteps"/>
+              <entry key="pagingInitialOffset">
+                <value>
+                  <Integer>0</Integer>
+                </value>
+              </entry>
+              <entry key="pagingSize">
+                <value>
+                  <Integer>50</Integer>
+                </value>
+              </entry>
+              <entry key="resMappingObj">
+                <value>
+                  <Map>
+                    <entry key="account.employeeId" value="employeeId"/>
+                    <entry key="account.firstName" value="firstName"/>
+                    <entry key="account.lastName" value="lastName"/>
+                    <entry key="account.username" value="username"/>
+                  </Map>
+                </value>
+              </entry>
+              <entry key="responseCode">
+                <value>
+                  <List>
+                    <String>200</String>
+                  </List>
+                </value>
+              </entry>
+              <entry key="rootPath"/>
+              <entry key="sequenceNumberForEndpoint" value="1"/>
+              <entry key="uniqueNameForEndPoint" value="Account aggregation"/>
+              <entry key="xpathNamespaces"/>
+            </Map>
+            <Map>
+              <entry key="afterRule"/>
+              <entry key="beforeRule"/>
+              <entry key="body">
+                <value>
+                  <Map>
+                    <entry key="bodyFormData"/>
+                    <entry key="bodyFormat" value="raw"/>
+                    <entry key="jsonBody"/>
+                  </Map>
+                </value>
+              </entry>
+              <entry key="contextUrl" value="/b8ec51b6-8145-4772-8886-c94367216589"/>
+              <entry key="header">
+                <value>
+                  <Map>
+                    <entry key="accept" value="jjapplication/json"/>
+                  </Map>
+                </value>
+              </entry>
+              <entry key="httpMethodType" value="GET"/>
+              <entry key="operationType" value="Test Connection"/>
+              <entry key="paginationSteps"/>
+              <entry key="pagingInitialOffset">
+                <value>
+                  <Integer>0</Integer>
+                </value>
+              </entry>
+              <entry key="pagingSize">
+                <value>
+                  <Integer>50</Integer>
+                </value>
+              </entry>
+              <entry key="resMappingObj">
+                <value>
+                  <Map>
+                    <entry key="account.employeeId" value="employeeId"/>
+                    <entry key="account.firstName" value="firstName"/>
+                    <entry key="account.lastName" value="lastName"/>
+                    <entry key="account.username" value="username"/>
+                  </Map>
+                </value>
+              </entry>
+              <entry key="responseCode">
+                <value>
+                  <List>
+                    <String>200</String>
+                  </List>
+                </value>
+              </entry>
+              <entry key="rootPath"/>
+              <entry key="sequenceNumberForEndpoint" value="2"/>
+              <entry key="uniqueNameForEndPoint" value="Test connection"/>
+              <entry key="xpathNamespaces"/>
+            </Map>
+          </List>
+        </value>
+      </entry>
+      <entry key="enableStatus"/>
+      <entry key="genericWebServiceBaseUrl" value="https://mocki.io/v1"/>
+      <entry key="nativeChangeDetectionAttributeScope" value="entitlements"/>
+      <entry key="nativeChangeDetectionAttributes"/>
+      <entry key="nativeChangeDetectionEnabled">
+        <value>
+          <Boolean/>
+        </value>
+      </entry>
+      <entry key="nativeChangeDetectionOperations"/>
+      <entry key="private_key_to_update"/>
+      <entry key="sysDescriptions">
+        <value>
+          <Map>
+            <entry key="en_US"/>
+          </Map>
+        </value>
+      </entry>
+      <entry key="timeoutInSeconds"/>
+    </Map>
+  </Attributes>
+  <Owner>
+    <Reference class="sailpoint.object.Identity" name="spadmin"/>
+  </Owner>
+  <ApplicationScorecard/>
+</Application>

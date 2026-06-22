@@ -1,0 +1,28 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE Application PUBLIC "sailpoint.dtd" "sailpoint.dtd">
+<Application connector="sailpoint.connector.DelimitedFileConnector" created="1763153504121" featuresString="DIRECT_PERMISSIONS, NO_RANDOM_ACCESS, DISCOVER_SCHEMA" icon="enterpriseIcon" id="7f0000019a65124b819a842dfeb721ff" modified="1767975564048" name="EnterpriseApps - AccountMan" profileClass="" proxiedName="EnterpriseApps - AccountMan" type="DelimitedFile">
+  <AccountCorrelationConfig>
+    <Reference class="sailpoint.object.CorrelationConfig" id="7f0000019a65124b819a842186a621a0" name="Multiplex Correlation"/>
+  </AccountCorrelationConfig>
+  <CustomizationRule>
+    <Reference class="sailpoint.object.Rule" id="7f0000019a65124b819a841a40d22191" name="Admin Customization Rule"/>
+  </CustomizationRule>
+  <Owner>
+    <Reference class="sailpoint.object.Identity" id="c0a801bd96361bba819636830ceb00e3" name="spadmin"/>
+  </Owner>
+  <ProxyApplication>
+    <Reference class="sailpoint.object.Application" id="7f0000019a65124b819a8423676921a4" name="Multiplex-App Base"/>
+  </ProxyApplication>
+  <Schemas>
+    <Schema created="1763153504133" displayAttribute="fullName" id="7f0000019a65124b819a842dfeb82201" identityAttribute="employeeId" instanceAttribute="" modified="1763153899759" nativeObjectType="account" objectType="account" permissionsRemediationModificationType="None">
+      <AttributeDefinition name="employeeId" type="string"/>
+      <AttributeDefinition name="fullName" type="string"/>
+      <AttributeDefinition name="userID" type="string"/>
+      <AttributeDefinition name="department" type="string"/>
+      <AttributeDefinition name="Application" type="string"/>
+      <AttributeDefinition name="inactiveIdentity" type="string"/>
+      <AttributeDefinition name="Role" type="string"/>
+    </Schema>
+  </Schemas>
+  <ApplicationScorecard created="1763153504116" id="7f0000019a65124b819a842dfeb72200" modified="1763153899758"/>
+</Application>

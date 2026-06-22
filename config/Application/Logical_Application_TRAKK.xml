@@ -1,0 +1,94 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE Application PUBLIC "sailpoint.dtd" "sailpoint.dtd">
+<Application connector="sailpoint.connector.DefaultLogicalConnector" featuresString="COMPOSITE, DISCOVER_SCHEMA" icon="enterpriseIcon" name="Logical Application - TRAKK" profileClass="" type="Logical">
+  <Attributes>
+    <Map>
+      <entry key="RetainEntitlementOverRemove">
+        <value>
+          <Boolean/>
+        </value>
+      </entry>
+      <entry key="afterProvisioningRule"/>
+      <entry key="beforeProvisioningRule"/>
+      <entry key="compositeDefinition">
+        <value>
+          <CompositeDefinition accountRule="" primaryTier="TRAKK" remediationRule="">
+            <Tiers>
+              <Tier application="TRAKK" correlationRule="">
+                <IdentitySelector>
+                  <MatchExpression>
+                    <MatchTerm name="capability" type="Entitlement" value="input">
+                      <ApplicationRef>
+                        <Reference class="sailpoint.object.Application" name="TRAKK"/>
+                      </ApplicationRef>
+                    </MatchTerm>
+                  </MatchExpression>
+                </IdentitySelector>
+              </Tier>
+            </Tiers>
+          </CompositeDefinition>
+        </value>
+      </entry>
+      <entry key="disableLinkFiltering">
+        <value>
+          <Boolean/>
+        </value>
+      </entry>
+      <entry key="disableManagedEntitlementFiltering">
+        <value>
+          <Boolean/>
+        </value>
+      </entry>
+      <entry key="nativeChangeDetectionAttributeScope" value="entitlements"/>
+      <entry key="nativeChangeDetectionAttributes"/>
+      <entry key="nativeChangeDetectionEnabled">
+        <value>
+          <Boolean/>
+        </value>
+      </entry>
+      <entry key="nativeChangeDetectionOperations"/>
+      <entry key="onDeleteRemoveEntitlements">
+        <value>
+          <Boolean/>
+        </value>
+      </entry>
+      <entry key="sysDescriptions">
+        <value>
+          <Map>
+            <entry key="en_US"/>
+          </Map>
+        </value>
+      </entry>
+      <entry key="templateApplication" value="Logical Template"/>
+    </Map>
+  </Attributes>
+  <Owner>
+    <Reference class="sailpoint.object.Identity" name="spadmin"/>
+  </Owner>
+  <Schemas>
+    <Schema displayAttribute="username" identityAttribute="username" instanceAttribute="" nativeObjectType="account" objectType="account">
+      <AttributeDefinition name="id" source="TRAKK.id" type="string">
+        <Description/>
+      </AttributeDefinition>
+      <AttributeDefinition name="username" source="TRAKK.username" type="string">
+        <Description/>
+      </AttributeDefinition>
+      <AttributeDefinition name="firstname" source="TRAKK.firstname" type="string">
+        <Description/>
+      </AttributeDefinition>
+      <AttributeDefinition name="lastname" source="TRAKK.lastname" type="string">
+        <Description/>
+      </AttributeDefinition>
+      <AttributeDefinition name="email" source="TRAKK.email" type="string">
+        <Description/>
+      </AttributeDefinition>
+      <AttributeDefinition entitlement="true" managed="true" multi="true" name="capability" source="TRAKK.capability" type="string">
+        <Description/>
+      </AttributeDefinition>
+      <AttributeDefinition name="description" source="TRAKK.description" type="string">
+        <Description/>
+      </AttributeDefinition>
+    </Schema>
+  </Schemas>
+  <ApplicationScorecard/>
+</Application>
