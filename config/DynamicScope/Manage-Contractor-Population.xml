@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE DynamicScope PUBLIC "sailpoint.dtd" "sailpoint.dtd">
+<DynamicScope created="1782066383394" id="7f0000019e3b1401819eeb6f0a225523" modified="1782066451170" name="Manage Contractor Population">
+  <Description></Description>
+  <Selector>
+    <IdentitySelector>
+      <MatchExpression>
+        <MatchTerm name="workgroups" type="Entitlement" value="Sailpoint-Workgroup-ManageContractors"/>
+      </MatchExpression>
+    </IdentitySelector>
+  </Selector>
+</DynamicScope>

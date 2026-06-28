@@ -1,0 +1,72 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE Workflow PUBLIC "sailpoint.dtd" "sailpoint.dtd">
+<Workflow created="1782076250663" explicitTransitions="true" id="7f0000019e3b1401819eec059a2558a2" modified="1782582331612" name="Sailpoint-Workflow-ManageContractors" type="LCMIdentity">
+  <Variable name="manager"/>
+  <Variable name="email"/>
+  <Variable name="department"/>
+  <Variable name="lastname"/>
+  <Variable name="firstname"/>
+  <Variable name="status"/>
+  <Variable name="employeeId"/>
+  <Step icon="Start" name="Start" posX="28" posY="10">
+    <Transition to="Create Contractor Form"/>
+  </Step>
+  <Step icon="Approval" name="Create Contractor Form" posX="98" posY="10">
+    <Approval name="Create Contractor Form Approval" owner="spadmin" return="manager,email,department,lastname,firstname,status,employeeId">
+      <Arg name="workItemForm" value="Sailpoint-Form-CreateContractors"/>
+    </Approval>
+    <Transition to="Create Identity"/>
+  </Step>
+  <Step icon="Stop" name="Stop" posX="454" posY="10"/>
+  <Step icon="Message" name="Create Identity" posX="304" posY="10">
+    <Script>
+      <Source>
+
+        import sailpoint.object.Identity;
+        import sailpoint.tools.GeneralException;
+        log.error("[CreateContractor] After form reached");
+
+        String employeeId = (String) workflow.get("employeeId");
+        String firstname = (String) workflow.get("firstname");
+        String lastname = (String) workflow.get("lastname");
+        String department = (String) workflow.get("department");
+        String email = (String) workflow.get("email");
+        String manager = (String) workflow.get("manager");
+        String status = (String) workflow.get("status");
+
+        log.error("[CreateContractor] firstname = " + firstname);
+        log.error("[CreateContractor] lastname = " + lastname);
+        log.error("[CreateContractor] employeeId = " + employeeId);
+
+        if (employeeId == null || employeeId.trim().length() == 0 ){
+        	throw new GeneralException("Employee ID is required.");
+        }
+
+        Identity existingIdentity = context.getObjectByName(Identity.class, employeeId); 
+        if (existingIdentity != null){
+        	throw new GeneralException("Identity already exists with name/employeeId:");
+        }
+
+        Identity identity = new Identity();
+        identity.setName(employeeId);
+        identity.setDisplayName(firstname + " "+ lastname);
+        identity.setFirstname(firstname);
+        identity.setLastname(lastname);
+        identity.setEmail(email);
+
+        identity.setAttribute("employeeId", employeeId);
+        identity.setAttribute("department", department);
+        identity.setAttribute("manager", manager);
+        identity.setAttribute("status", status);
+        
+        context.saveObject(identity);
+        context.commitTransaction();
+        
+        log.error("[CreateContractor] Identity created successfully: " + employeeId);
+
+
+      </Source>
+    </Script>
+    <Transition to="Stop"/>
+  </Step>
+</Workflow>

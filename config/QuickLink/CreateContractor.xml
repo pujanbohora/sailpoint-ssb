@@ -1,0 +1,16 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE QuickLink PUBLIC "sailpoint.dtd" "sailpoint.dtd">
+<QuickLink action="workflow" category="ManageContractors" created="1782066006914" id="7f0000019e3b1401819eeb694b815424" messageKey="Create Contractor" modified="1782076496468" name="CreateContractor" ordering="1">
+  <Attributes>
+    <Map>
+      <entry key="workflowName" value="Sailpoint-Workflow-ManageContractors"/>
+      <entry key="workflowSuccess" value=" workflow Sucessfully launched"/>
+    </Map>
+  </Attributes>
+  <Description>quicklink to create contractors</Description>
+  <QuickLinkOptions allowSelf="true" created="1782066451138" id="7f0000019e3b1401819eeb7012c15556" modified="1782076496468">
+    <DynamicScopeRef>
+      <Reference class="sailpoint.object.DynamicScope" id="7f0000019e3b1401819eeb6f0a225523" name="Manage Contractor Population"/>
+    </DynamicScopeRef>
+  </QuickLinkOptions>
+</QuickLink>

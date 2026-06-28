@@ -1,0 +1,40 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE Form PUBLIC "sailpoint.dtd" "sailpoint.dtd">
+<Form created="1782078003632" id="7f0000019eec1ac4819eec2059ae00cc" modified="1782350046725" name="Sailpoint-Form-CreateContractors" type="Workflow">
+  <Attributes>
+    <Map>
+      <entry key="pageTitle" value="Sailpoint-Form-CreateContractors"/>
+    </Map>
+  </Attributes>
+  <Description></Description>
+  <Section label="Create Contractor" name="CreateContractor">
+    <Field displayName="Employee Id" name="employeeId" required="true" type="string"/>
+    <Field displayName="First Name" name="firstname" required="true" type="string"/>
+    <Field displayName="Last Name" name="lastname" type="string"/>
+    <Field displayName="Department" name="department" type="string">
+      <AllowedValuesDefinition>
+        <Value>
+          <List>
+            <String>sailpoint</String>
+            <String>okta</String>
+            <String>aws</String>
+          </List>
+        </Value>
+      </AllowedValuesDefinition>
+    </Field>
+    <Field displayName="Email" name="email" type="string"/>
+    <Field displayName="Manager" name="manager" type="sailpoint.object.Identity"/>
+    <Field displayName="Status" helpKey="Please give status of the contractor" name="status" type="string">
+      <AllowedValuesDefinition>
+        <Value>
+          <List>
+            <String>Active</String>
+            <String>Inactive</String>
+          </List>
+        </Value>
+      </AllowedValuesDefinition>
+    </Field>
+  </Section>
+  <Button action="cancel" label="Cancel"/>
+  <Button action="next" label="Submit"/>
+</Form>
